@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bgcolorBlue"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+            android:layout_marginTop="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome" android:layout_marginLeft="5dp"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            ></TextView>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/ivicon"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="20dp"
+
+                android:src="@drawable/appicon"
+                ></androidx.appcompat.widget.AppCompatImageView>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today's Weather"
+            android:layout_marginLeft="5dp"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:layout_marginBottom="40dp"
+            android:textStyle="bold"
+            ></TextView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv"
+        android:paddingBottom="6dp"
+        >
+
+       <androidx.cardview.widget.CardView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="25dp"
+           android:layout_marginTop="20dp"
+           app:cardElevation="10dp"
+           app:cardCornerRadius="6dp">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+               <androidx.appcompat.widget.AppCompatImageView
+                   android:layout_width="120dp"
+                   android:layout_height="120dp"
+                   android:layout_margin="10dp"
+                   android:id="@+id/weatheriv"
+                   ></androidx.appcompat.widget.AppCompatImageView>
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/tvweather"
+                   android:text="Weather"
+
+                   android:textColor="@color/textcolor"
+                   android:gravity="center"
+                   android:textSize="20sp"></TextView>
+           </LinearLayout>
+       </androidx.cardview.widget.CardView>
+       <androidx.cardview.widget.CardView
+         android:layout_alignParentEnd="true"
+
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginEnd="20dp"
+           android:layout_marginTop="20dp"
+           app:cardElevation="10dp"
+           app:cardCornerRadius="8dp">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+               <androidx.appcompat.widget.AppCompatImageView
+                   android:layout_width="120dp"
+                   android:layout_height="120dp"
+                   android:layout_margin="10dp"
+                   android:src="@drawable/temperature"
+                   ></androidx.appcompat.widget.AppCompatImageView>
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/tvtemp"
+                   android:text="Temperature"
+                   android:textColor="@color/textcolor"
+                   android:gravity="center"
+                   android:textSize="20sp"></TextView>
+           </LinearLayout>
+
+
+       </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="6dp"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="6dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/wind"
+                    ></androidx.appcompat.widget.AppCompatImageView>
+                <TextView
+                   android:padding="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvwind"
+                    android:textColor="@color/textcolor"
+                    android:text="Wind"
+
+                    android:gravity="center"
+                    android:textSize="18sp"></TextView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_alignParentEnd="true"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/location"
+                    ></androidx.appcompat.widget.AppCompatImageView>
+                <TextView
+                    android:padding="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvlocation"
+                    android:text="Location"
+                    android:textColor="@color/textcolor"
+                    android:gravity="center"
+                    android:textSize="18sp"></TextView>
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="6dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/sunrise"
+                    ></androidx.appcompat.widget.AppCompatImageView>
+                <TextView
+                  android:padding="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvsunrise"
+                    android:textColor="@color/textcolor"
+                    android:text="Sunrise"
+                    android:gravity="center"
+                    android:textSize="20sp"></TextView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_alignParentEnd="true"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/sunset"
+                    ></androidx.appcompat.widget.AppCompatImageView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:padding="1dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvsunset"
+                    android:text="Sunset"
+                    android:textColor="@color/textcolor"
+                    android:gravity="center"
+                    android:textSize="20sp"></TextView>
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+</ScrollView>
